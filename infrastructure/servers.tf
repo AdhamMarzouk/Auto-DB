@@ -1,3 +1,4 @@
+# VM for the source DB
 resource "aws_instance" "source_db" {
   instance_type = var.database_server_type
   ami = var.ubuntu_os
