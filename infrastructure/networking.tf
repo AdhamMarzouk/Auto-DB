@@ -75,10 +75,10 @@ resource "aws_security_group" "servers_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # port for sql server connection
+  # port for postgrsql connection
   ingress {
-    from_port = 1433
-    to_port = 1433
+    from_port = 5432
+    to_port = 5432
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
