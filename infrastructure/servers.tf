@@ -1,5 +1,5 @@
 # VM for the source DB
-resource "aws_instance" "source_db" {
+resource "aws_instance" "database_server" {
   instance_type = var.database_server_type
   ami = var.ubuntu_os
   key_name = "etl-side-project"
@@ -14,6 +14,6 @@ resource "aws_instance" "source_db" {
   }
 
   tags = {
-    Name = "source_db"
+    Name = "database_server"
   }
 }
