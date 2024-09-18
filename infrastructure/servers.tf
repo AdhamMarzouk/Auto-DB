@@ -13,6 +13,18 @@ resource "aws_instance" "database_server" {
     delete_on_termination = true
   }
 
+  user_data = <<EOF
+  #!/bin/bash
+  echo "Updating the system"
+  sudo apt update
+
+  echo "Installing python for Ansible hosts"
+  sudo apt install python3 python3-pip
+
+  echo "Check Python is installed"
+  python3 --version
+  EOF
+
   tags = {
     Name = "database_server"
   }
