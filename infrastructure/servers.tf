@@ -19,7 +19,7 @@ resource "aws_instance" "database_server" {
   sudo apt update
 
   echo "Installing python for Ansible hosts"
-  sudo apt install -y python3 python3-pip python3-setuptools python3-virtualenv
+  sudo apt install -y python3
 
   echo "Check Python is installed"
   python3 --version
