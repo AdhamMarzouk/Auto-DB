@@ -1,0 +1,13 @@
+name: AWS Infrastructure with Terraform, Bash, and Ansible
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  build-infrastructure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkour the repository
+        uses: actions/checkout@v2
+        
