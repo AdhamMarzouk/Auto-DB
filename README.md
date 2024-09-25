@@ -2,6 +2,8 @@
 ![Terraform Version](https://img.shields.io/badge/Terraform-v1.9.5-purple)
 ![Ansible Version](https://img.shields.io/badge/Ansible-v2.17.4-blue)
 
+# ![Auto-DB Logo](logo/Auto-DB.jpeg)
+
 Welcome to Auto-DB — an automated PostgreSQL database deployment on AWS using Terraform and Ansible! With Auto-DB, you can spin up a fully configured PostgreSQL database on the cloud in no time.
 
 
