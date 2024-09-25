@@ -74,9 +74,9 @@ Follow these steps to deploy Auto-DB
         cp /path_to_key_file /Auto-DB/ansible_automation
         ```
     - Ensure that the key is not public
-    ```
-    chmod 400 "<your_key_file>"
-    ```
+        ```
+        chmod 400 "<your_key_file>"
+        ```
 
 5. **Ansible Setup**
     - Navigate to the ansible_automation/ directory:
