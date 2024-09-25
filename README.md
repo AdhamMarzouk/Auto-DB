@@ -29,6 +29,7 @@ The project contains the following directories and files:
 Follow these steps to deploy Auto-DB
 
 ### Prerequisites
+- An Ubuntu machine.
 - Terraform, Ansible, and AWS CLI installed.
 - AWS credentials configured (aws configure).
 - SSH access to the EC2 instance (keypair: `Auto-DB-key-pair.pem`).
