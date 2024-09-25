@@ -1,11 +1,13 @@
 # Auto-DB
 Welcome to Auto-DB — an automated PostgreSQL database deployment on AWS using Terraform and Ansible! With Auto-DB, you can spin up a fully configured PostgreSQL database on the cloud in no time.
 
+
 ## 🚀 What is Auto-DB?
 Auto-DB automates the creation of AWS infrastructure and the installation and configuration of PostgreSQL. It leverages:
 
 - Terraform to set up AWS resources, including VPCs, subnets, security groups, EC2 instances, and Elastic IPs.
 - Ansible to install PostgreSQL, configure it to accept remote connections, and create an initial database.
+
 
 
 ## 🛠️ Project Structure
@@ -22,8 +24,9 @@ The project contains the following directories and files:
 - **/update_inventory.sh**: A shell script to automatically update the Ansible `inventory.ini` with the EC2 instance’s Elastic IP.
 
 
+
 ## 🏗️ How to Deploy
-Follow these steps to deploy Auto-DB:
+Follow these steps to deploy Auto-DB
 
 ### Prerequisites
 - Terraform, Ansible, and AWS CLI installed.
@@ -32,17 +35,41 @@ Follow these steps to deploy Auto-DB:
 
 ### Deployment Steps
 1. **Fork the Repository**: First, fork this repository to your own GitHub account. This will allow you to modify the project if needed without affecting the original codebase.
- - Navigate to the top-right corner of this repository page and click the Fork button.
+    - Navigate to the top-right corner of this repository page and click the Fork button.
+
 
 2. **Clone Your Fork**: After forking the repository, clone it to your local machine:
     ```
     git clone https://github.com/yourusername/Auto-DB.git
     cd Auto-DB
     ```
-3. **Terraform Setup**:
+
+3. **Terraform Setup**
     - Navigate to the `infrastructure/` directory:
+        ```
+        cd infrastructure/
+        ```
     - Initialize Terraform:
+        ```
+        terraform init
+        ```
     - Apply the configuration to build the AWS infrastructure:
+        ```
+        terraform apply
+        ```
+
+    - After Terraform finishes, it will output the Elastic IP of the database server.
+
+4. **Ansible Setup**
+    - Navigate to the ansible_automation/ directory:
+        ```
+        cd ansible_automation/
+        ```
+    - Run the Ansible playbook to install and configure PostgreSQL:
+        ```
+        ansible-playbook server_setup.yml
+        ```
+
 
 
 ## ⚡ Features
