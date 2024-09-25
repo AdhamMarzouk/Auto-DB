@@ -2,7 +2,7 @@
 resource "aws_instance" "database_server" {
   instance_type = var.database_server_type
   ami = var.ubuntu_os
-  key_name = "Auto-DB-key-pair.pem"
+  key_name = "Auto-DB-key-pair"
 
   subnet_id = aws_subnet.servers_subnet.id
   security_groups = [aws_security_group.servers_sg.id]
