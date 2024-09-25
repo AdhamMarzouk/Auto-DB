@@ -60,7 +60,13 @@ Follow these steps to deploy Auto-DB
 
     - After Terraform finishes, it will output the Elastic IP of the database server.
 
-4. **Ansible Setup**
+4. **Inventory Update**
+    - Run the bash script that updates the Ansible inventory `inventory.ini` with the new server's IP
+        ```
+        sh update_inventory.sh
+        ```
+
+5. **Ansible Setup**
     - Navigate to the ansible_automation/ directory:
         ```
         cd ansible_automation/
@@ -74,6 +80,9 @@ Follow these steps to deploy Auto-DB
 
 ## ⚡ Features
 - Automated AWS infrastructure provisioning using Terraform.
+
 - PostgreSQL installation and configuration using Ansible.
+
 - Secure remote access enabled for PostgreSQL.
+
 - Ready-to-use PostgreSQL database (mydb) with user authentication.
