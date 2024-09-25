@@ -33,7 +33,7 @@ Follow these steps to deploy Auto-DB
 
 ### Prerequisites
 - An Ubuntu machine.
-- Terraform, Ansible, and AWS CLI installed [Terraform Installation](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
+- Terraform, Ansible, and AWS CLI installed [Terraform Installation](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) [Ansible Installation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 - AWS credentials configured (aws configure).
 - SSH access to the EC2 instance (keypair: `Auto-DB-key-pair.pem`).
 
