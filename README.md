@@ -39,17 +39,13 @@ Follow these steps to deploy Auto-DB
 - SSH access to the EC2 instance [Create Key-Value Pair](https://docs.aws.amazon.com/whitepapers/latest/teaching-big-data-skills-with-amazon-emr/download-pem-file-for-emr-cluster-access.html#:~:text=In%20the%20left%20navigation%20pane,is%20downloaded%20in%20your%20browser.).
 
 ### Deployment Steps
-1. **Fork the Repository**: First, fork this repository to your own GitHub account. This will allow you to modify the project if needed without affecting the original codebase.
-    - Navigate to the top-right corner of this repository page and click the Fork button.
-
-
-2. **Clone Your Fork**: After forking the repository, clone it to your local machine:
+1. **Clone The Repo**: Clone the repository to your local machine:
     ```
     git clone https://github.com/yourusername/Auto-DB.git
     cd Auto-DB
     ```
 
-3. **Terraform Setup**
+2. **Terraform Setup**
     - Navigate to the `infrastructure/` directory:
         ```
         cd infrastructure/
@@ -65,13 +61,13 @@ Follow these steps to deploy Auto-DB
 
     - After Terraform finishes, it will output the Elastic IP of the database server.
 
-4. **Inventory Update**
+3. **Inventory Update**
     - Run the bash script that updates the Ansible inventory `inventory.ini` with the new server's IP
         ```
         sh update_inventory.sh
         ```
 
-5. **Ansible Setup**
+4. **Ansible Setup**
     - Navigate to the ansible_automation/ directory:
         ```
         cd ansible_automation/
