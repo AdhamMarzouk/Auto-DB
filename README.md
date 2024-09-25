@@ -19,6 +19,7 @@ The project contains the following directories and files:
     - `networking.tf`: Creates VPC, subnet, internet gateway, route table, and security group.
     - `servers.tf`: Launches an EC2 instance to host the PostgreSQL database.
     - `eip_addresses.tf`: Assigns a fixed Elastic IP to the database server.
+    - `variables.tf`: Define the OS and Instance type of the DB server.
 
 - **/ansible_automation/**: Contains Ansible playbooks and configuration.
     - `ansible.cfg`: Ansible configuration file defining remote settings and inventory.
