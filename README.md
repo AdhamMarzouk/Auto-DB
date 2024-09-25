@@ -24,6 +24,7 @@ The project contains the following directories and files:
 - **/ansible_automation/**: Contains Ansible playbooks and configuration.
     - `ansible.cfg`: Ansible configuration file defining remote settings and inventory.
     - `server_setup.yml`: Ansible playbook to install PostgreSQL, configure remote access, and create a database.
+    - `inventory.ini`: The inventory that contains the IP addresses of the Database Server on AWS.
 
 - **/update_inventory.sh**: A shell script to automatically update the Ansible `inventory.ini` with the EC2 instance’s Elastic IP.
 
