@@ -34,8 +34,8 @@ Follow these steps to deploy Auto-DB
 ### Prerequisites
 - An Ubuntu machine.
 - Terraform, Ansible, and AWS CLI installed [Terraform Installation](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli), [Ansible Installation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html), [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-- AWS credentials configured (aws configure).
-- SSH access to the EC2 instance (keypair: `Auto-DB-key-pair.pem`).
+- AWS credentials configured [Configure AWS](https://docs.aws.amazon.com/cli/v1/userguide/cli-configure-envvars.html#envvars-set).
+- SSH access to the EC2 instance [Create Key-Value Pair](https://docs.aws.amazon.com/whitepapers/latest/teaching-big-data-skills-with-amazon-emr/download-pem-file-for-emr-cluster-access.html#:~:text=In%20the%20left%20navigation%20pane,is%20downloaded%20in%20your%20browser.).
 
 ### Deployment Steps
 1. **Fork the Repository**: First, fork this repository to your own GitHub account. This will allow you to modify the project if needed without affecting the original codebase.
