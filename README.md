@@ -19,7 +19,7 @@ The project contains the following directories and files:
     - `networking.tf`: Creates VPC, subnet, internet gateway, route table, and security group.
     - `servers.tf`: Launches an EC2 instance to host the PostgreSQL database.
     - `eip_addresses.tf`: Assigns a fixed Elastic IP to the database server.
-    - `variables.tf`: Define the OS and Instance type of the DB server.
+    - `variables.tf`: Define the OS and Instance type of the DB server. Feel free to change it according to your needs
 
 - **/ansible_automation/**: Contains Ansible playbooks and configuration.
     - `ansible.cfg`: Ansible configuration file defining remote settings and inventory.
@@ -68,7 +68,17 @@ Follow these steps to deploy Auto-DB
         sh update_inventory.sh
         ```
 
-4. **Ansible Setup**
+4. **Add the .pem key**
+    - Copy the .pem key you've downloaded from AWS inside the `ansible_automation` directory
+        ```
+        cp /path_to_key_file /Auto-DB/ansible_automation
+        ```
+    - Ensure that the key is not public
+    ```
+    chmod 400 "<your_key_file>"
+    ```
+
+5. **Ansible Setup**
     - Navigate to the ansible_automation/ directory:
         ```
         cd ansible_automation/
@@ -78,6 +88,12 @@ Follow these steps to deploy Auto-DB
         ansible-playbook server_setup.yml
         ```
 
+6. **Clean Up**
+    - Do you want to clean up the resources you've just created?
+        ```
+        cd infrastructure
+        terraform destory
+        ```
 
 
 ## ⚡ Features
